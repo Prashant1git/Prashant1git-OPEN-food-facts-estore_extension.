@@ -2,7 +2,7 @@
 Sell stuff and see what sticks
 
 # Project Summary: Open Food Facts Canada Online Store Extension
-*The Problem
+(*) The Problem
 Canadian shoppers lack health transparency on major retail sites (Walmart, Loblaws, etc.) because Product UPCs are often missing or hidden. This gap prevents 1:1 matching with the Open Food Facts database.
 The Solution
 I will build a modular WXT-based browser extension that uses a Multi-Tiered Matching Logic to bypass the missing UPC blocker. This ensures users get Nutri-Score and Eco-Score data even when a barcode isn't explicitly listed.
