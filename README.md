@@ -7,8 +7,15 @@ Canadian shoppers lack health transparency on major retail sites (Walmart, Lobla
  2. The Solution
 I will build a modular WXT-based browser extension that uses a Multi-Tiered Matching Logic to bypass the missing UPC blocker. This ensures users get Nutri-Score and Eco-Score data even when a barcode isn't explicitly listed.
  3. Key Innovations
- - Fallback Matching: Uses Metadata Scraping (ld+json) → Weighted Fuzzy Search (Brand + Name + Weight) → User-Assisted Contributions.
- - DuckDB Integration: Transitioning from API-based calls to the Canadian DuckDB instance for high-performance, local analytical queries.
- - Bilingual Support: Dynamic rendering in English and French via the Knowledge Panels API.
- 4. Impact
-This project turns the extension into a growth tool for the Open Food Facts Canada database while providing immediate value to consumers.
+## 🚀 Technical Progress: Proof of Concept (March 2026)
+
+I have successfully implemented a functional prototype using the **WXT framework** that demonstrates the core "Multi-Tiered Matching" logic proposed for this project.
+
+### Key Accomplishments:
+- **Resilient Extraction:** Implemented a **JSON-LD Metadata Parser** to extract high-fidelity product names and brands directly from the site's structured data. This successfully bypasses "False Positives" caused by "Related Products" carousels on Walmart's SPA.
+- **Smart Search Logic:** Integrated a sanitization layer that strips marketing "noise" (e.g., "Family Size", "Rollback", weights) to improve API matching accuracy.
+- **Live API Integration:** Real-time fetching from the [Open Food Facts API](https://world.openfoodfacts.org/) to display Nutri-Scores directly on retail product pages.
+- **Reactive UI:** Built a `MutationObserver` and polling-based UI that updates instantly as users navigate between products without requiring a page refresh.
+
+### Demo:
+*Current status: Successfully identifies products and fetches Nutri-Scores (e.g., Nutrela Soya Chunks → Nutri-Score B).*
